@@ -12,6 +12,8 @@ class AlcoholEntry(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     tags = models.CharField(max_length=200, blank=True)
+    image_filename = models.CharField(max_length=200, default='image.jpg')
+    distiller_website = models.URLField(max_length=200, default='https://www.example.com')
 
     def __str__(self):
         return self.name
