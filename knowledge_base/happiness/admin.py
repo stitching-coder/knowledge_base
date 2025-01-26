@@ -11,6 +11,6 @@ class WordOfTheYearAdmin(admin.ModelAdmin):
 
 @admin.register(Entry)
 class EntryAdmin(admin.ModelAdmin):
-    list_display = ('title', 'created_at', 'updated_at')
+    list_display = ('title', 'content', 'tags', 'created_at', 'updated_at')
     search_fields = ('title', 'content', 'tags')
     list_filter = ('created_at', 'updated_at')

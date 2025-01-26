@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ entry.name }}</title>
+    </head>
+    <body>
+        <h1>{{ entry.name }}</h1>
+        <p>Type: {{ entry.type }}</p>
+        <p>Distiller: {{ entry.distiller }}</p>
+        <div>{{ entry.notes|linebreaks }}</div>
+        <p>Alcohol Content: {{ entry.alcohol_content }}</p>
+        <p>Price: {{ entry.price }}</p>
+        <p>Tags: {{ entry.tags }}</p>
+        <p>Created: {{ entry.created_at }}</p>
+        <p>Last Updated: {{ entry.updated_at }}</p>
+        <a href="{% url 'entry_list' %}">Back to list</a>
+    </body>
+</html>
