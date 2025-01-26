@@ -5,10 +5,10 @@
     </head>
     <body>
         <h1>{{ entry.title }}</h1>
+        <div>{{ entry.content|linebreaks }}</div>
+        <p>Tags: {{ entry.tags }}</p>
         <p>Created: {{ entry.created_at }}</p>
         <p>Last Updated: {{ entry.updated_at }}</p>
-        <p>Tags: {{ entry.tags }}</p>
-        <div>{{ entry.content|linebreaks }}</div>
         <a href="{% url 'entry_list' %}">Back to list</a>
     </body>
 </html>
