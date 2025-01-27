@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ entry.name }}</title>
+        <title>{{ entry.title }}</title>
     </head>
     <body>
         <h1>{{ entry.name }}</h1>
+        <p>Creator: {{ entry.creator }}</p>
+        <p>Status: {{ entry.status }}</p>
+        <p>Stitching Type: {{ entry.stitching_type }}</p>
         <p>Type: {{ entry.type }}</p>
-        <p>Distiller: {{ entry.distiller }}</p>
-        <div>{{ entry.notes|linebreaks }}</div>
-        <p>Alcohol Content: {{ entry.alcohol_content }}</p>
-        <p>Price: {{ entry.price }}</p>
         <p>Tags: {{ entry.tags }}</p>
         <!--{% load static %}
         <img src="{% static 'alcohol/' {{ entry.image_filename }} %}" alt="My image">-->
