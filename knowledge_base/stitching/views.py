@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import StitchingProjectEntry
+from .models import Project
 
 
-def stitching_entry_list(request):
-    entries = StitchingProjectEntry.objects.all().order_by('-created_at')
-    return render(request, 'stitching/stitching_entry_list.html', {'entries': entries})
+def project_list(request):
+    projects = Project.objects.all().order_by('-created_at')
+    return render(request, 'stitching/project_list.html', {'projects': projects})
 
 
-def stitching_entry_detail(request, pk):
-    entry = StitchingProjectEntry.objects.get(pk=pk)
-    return render(request, 'stitching/stitching_entry_detail.html', {'entry': entry})
+def project_detail(request, pk):
+    project = Project.objects.get(pk=pk)
+    return render(request, 'stitching/project_detail.html', {'project': project})

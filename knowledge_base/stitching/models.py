@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class StitchingProjectEntry(models.Model):
+class Project(models.Model):
     name = models.CharField(max_length=200)
     creator = models.CharField(max_length=200)
     status = models.CharField(max_length=200)
@@ -17,4 +17,4 @@ class StitchingProjectEntry(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = "Stitching Projects"
+        verbose_name_plural = "Projects"

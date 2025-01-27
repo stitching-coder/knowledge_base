@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Alcohol List</title>
+    </head>
+    <body>
+        <h1>My Alcohol List</h1>
+        {% for beverage in beverages %}
+            <h2><a href="{% url 'beverage_detail' beverage.pk %}">{{ beverage.name }}</a></h2>
+            <p>Created: {{ beverage.created_at }}</p>
+            <p>Tags: {{ beverage.tags }}</p>
+        {% endfor %}
+    </body>
+</html>

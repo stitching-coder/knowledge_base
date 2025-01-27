@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ project.title }}</title>
+    </head>
+    <body>
+        <h1>{{ project.name }}</h1>
+        <p>Creator: {{ project.creator }}</p>
+        <p>Status: {{ project.status }}</p>
+        <p>Stitching Type: {{ project.stitching_type }}</p>
+        <p>Type: {{ project.type }}</p>
+        <p>Tags: {{ project.tags }}</p>
+        <!--{% load static %}
+        <img src="{% static 'alcohol/' {{ project.image_filename }} %}" alt="My image">-->
+        <p>Created: {{ project.created_at }}</p>
+        <p>Last Updated: {{ project.updated_at }}</p>
+        <a href="{% url 'project_list' %}">Back to list</a>
+    </body>
+</html>

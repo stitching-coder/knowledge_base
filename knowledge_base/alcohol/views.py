@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import AlcoholEntry
+from .models import Beverage
 
 
-def alcohol_entry_list(request):
-    entries = AlcoholEntry.objects.all().order_by('-created_at')
-    return render(request, 'alcohol/alcohol_entry_list.html', {'entries': entries})
+def beverage_list(request):
+    beverages = Beverage.objects.all().order_by('-created_at')
+    return render(request, 'alcohol/beverage_list.html', {'beverages': beverages})
 
 
-def alcohol_entry_detail(request, pk):
-    entry = AlcoholEntry.objects.get(pk=pk)
-    return render(request, 'alcohol/alcohol_entry_detail.html', {'entry': entry})
+def beverage_detail(request, pk):
+    beverage = Beverage.objects.get(pk=pk)
+    return render(request, 'alcohol/beverage_detail.html', {'beverage': beverage})

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Stitching List</title>
+    </head>
+    <body>
+        <h1>My Stitching List</h1>
+        {% for project in projects %}
+            <h2><a href="{% url 'project_detail' project.pk %}">{{ project.name }}</a></h2>
+            <p>Created: {{ project.created_at }}</p>
+            <p>Tags: {{ project.tags }}</p>
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Habits List</title>
+    </head>
+    <body>
+        <h1>My Habits List</h1>
+        {% for habit in habits %}
+            <h2><a href="{% url 'habit_detail' habit.pk %}">{{ habit.name }}</a></h2>
+            <p>Created: {{ habit.created_at }}</p>
+            <p>Tags: {{ habit.tags }}</p>
+        {% endfor %}
+    </body>
+</html>

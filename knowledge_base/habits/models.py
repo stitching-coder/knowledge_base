@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class HabitEntry(models.Model):
+class Habit(models.Model):
     name = models.CharField(max_length=200)
     type = models.CharField(max_length=200)
     trigger = models.CharField(max_length=200)
@@ -15,6 +15,4 @@ class HabitEntry(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = "Habit Entries"
-
-# Create your models here.
+        verbose_name_plural = "Habits"

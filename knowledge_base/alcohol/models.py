@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class AlcoholEntry(models.Model):
+class Beverage(models.Model):
     name = models.CharField(max_length=200)
     type = models.CharField(max_length=200)
     distiller = models.CharField(max_length=200)
@@ -19,4 +19,4 @@ class AlcoholEntry(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = "Alcohol Entries"
+        verbose_name_plural = "Beverages"

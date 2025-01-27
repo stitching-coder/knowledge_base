@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ habit.name }}</title>
+    </head>
+    <body>
+        <h1>{{ habit.name }}</h1>
+        <p>Type: {{ habit.type }}</p>
+        <p>Trigger: {{ habit.trigger }}</p>
+        <div>{{ habit.notes|linebreaks }}</div>
+        <p>Tags: {{ habit.tags }}</p>
+        <p>Created: {{ habit.created_at }}</p>
+        <p>Last Updated: {{ habit.updated_at }}</p>
+        <a href="{% url 'habit_list' %}">Back to list</a>
+    </body>
+</html>
