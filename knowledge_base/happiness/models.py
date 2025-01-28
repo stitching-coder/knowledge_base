@@ -5,7 +5,7 @@ from django.utils import timezone
 class WordOfTheYear(models.Model):
     year = models.IntegerField()
     word = models.CharField(max_length=50)
-    created_at = models.DateTimeField(default=timezone.now())
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):

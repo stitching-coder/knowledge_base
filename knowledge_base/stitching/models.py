@@ -10,7 +10,7 @@ class Project(models.Model):
     type = models.CharField(max_length=200)
     tags = models.CharField(max_length=200, blank=True)
     image_filename = models.CharField(max_length=200, default='image.jpg')
-    created_at = models.DateTimeField(default=timezone.now())
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
