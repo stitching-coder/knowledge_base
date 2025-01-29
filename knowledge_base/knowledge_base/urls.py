@@ -24,4 +24,5 @@ urlpatterns = [
     path('alcohol/', include('alcohol.urls')),
     path('habits/', include('habits.urls')),
     path('stitching/', include('stitching.urls')),
+    path('books/', include('books.urls'))
 ]

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ book.title }}</title>
+    </head>
+    <body>
+        <h1>Title: {{ book.title }}</h1>
+        <p>Book ID:{{ book.book_id }}</p>
+        <p>Primary Author: {{ book.primary_author }}</p>
+        <p>Primary Author Role: {{ book.primary_author_role }}</p>
+        <p>Secondary Author: {{ book.secondary_author }}</p>
+        <p>Secondary Author Role: {{ book.secondary_author_role }}</p>
+        <div>Book Summary: {{ book.summary|linebreaks }}</div>
+        <p>Publication: {{ book.publication }}</p>
+        <p>Date: {{ book.date }}</p>
+        <p>Data Source: {{ book.source }}</p>
+        <p>Media: {{ book.media }}</p>
+        <p>Dewey Decimal: {{ book.dewey_decimal }}</p>
+        <div>{Dewey Decimal Wording: { book.dewey_wording|linebreaks }}</div>
+        <p>Physical Description: {{ book.physical_description }}</p>
+        <p>Dimensions: {{ book.dimensions }}</p>
+        <p>Height: {{ book.height }}</p>
+        <p>Length: {{ book.length }}</p>
+        <p>Thickness: {{ book.thickness }}</p>
+        <p>Weight: {{ book.weight }}</p>
+        <p>Page Count: {{ book.page_count }}</p>
+        <p>ISBN: {{ book.isbn }}</p>
+        <p>ISBNs: {{ book.isbns }}</p>
+        <p>LC Classification: {{ book.lc_classification }}</p>
+        <p>Subjects: {{ book.subjects }}</p>
+        <p>Tags: {{ book.tags }}</p>
+        <p>Library Thing Work ID: {{ book.work_id }}</p>
+<!--        {% load static %}-->
+<!--        <img src="{% static 'books/'%}{{ book.image_filename }}" alt="My image">-->
+        <p>Created: {{ book.created_at }}</p>
+        <p>Last Updated: {{ book.updated_at }}</p>
+        <a href="{% url 'book_list' %}">Back to list</a>
+    </body>
+</html>

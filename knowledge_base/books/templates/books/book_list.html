@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Book List</title>
+    </head>
+    <body>
+        <h1>My Book List</h1>
+        {% for book in books %}
+            <h2><a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a></h2>
+            <p>Created: {{ book.created_at }}</p>
+            <p>Tags: {{ book.tags }}</p>
+        {% endfor %}
+    </body>
+</html>
