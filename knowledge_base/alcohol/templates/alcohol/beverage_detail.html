@@ -11,8 +11,8 @@
         <p>Alcohol Content: {{ beverage.alcohol_content }}</p>
         <p>Price: {{ beverage.price }}</p>
         <p>Tags: {{ beverage.tags }}</p>
-        <!--{% load static %}
-        <img src="{% static 'alcohol/' {{ beverage.image_filename }} %}" alt="My image">-->
+        {% load static %}
+        <img src="{% static 'alcohol/'%}{{ beverage.image_filename }}" alt="My image">
         <p>Created: {{ beverage.created_at }}</p>
         <p>Last Updated: {{ beverage.updated_at }}</p>
         <a href="{% url 'beverage_list' %}">Back to list</a>
